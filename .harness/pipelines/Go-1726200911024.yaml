@@ -60,7 +60,7 @@ pipeline:
                   identifier: Run_4
                   spec:
                     connectorRef: account.Harness_Docker_Connector
-                    image: suryasai003/secondplugin
+                    image: suryasai003/gofirstv1
                     shell: Sh
           platform:
             os: Linux
