@@ -46,20 +46,18 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
-                  identifier: dockerbuild
-                  name: docker_build
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    caching: true
-                    connectorRef: <+input>
-                    repo: hello/world
+                    connectorRef: account.Harness_Docker_Connector
+                    repo: suryasai003/gofirstv1
                     tags:
                       - latest
-                  timeout: ""
-                  type: BuildAndPushDockerRegistry
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
