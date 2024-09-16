@@ -54,14 +54,6 @@ pipeline:
                     repo: suryasai003/gofirstv1
                     tags:
                       - latest
-              - step:
-                  type: Run
-                  name: Run_4
-                  identifier: Run_4
-                  spec:
-                    connectorRef: account.harnessImage
-                    image: suryasai003/gofirstv1
-                    shell: Sh
           platform:
             os: Linux
             arch: Arm64
